@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<div class="container center-type">
+    <form action="{% url 'output' %}">
+      <h6>Type digit upto which you need the PI value</h6>
+      <select name="length">
+        {% for i in lis %}
+        <option value={{i}}>{{i}}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Genrate PI" class="btn btn-success">
+    </form>
+    </div>
+  </body>
+
+</html>
